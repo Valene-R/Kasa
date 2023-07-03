@@ -1,17 +1,19 @@
 import React from 'react';
 // import Navigation from '../components/Navigation';
 // import Logo from '../components/Logo';
-import Header from '../components/Header';
+import Header from '../../components/Header/Header';
+import Banner from '../../components/Banner/Banner';
 
-const About = () => {
+const Home = () => {
     return (
         <div>
             {/* <Logo />
             <Navigation /> */}
             <Header />
-            <h1>A Propos</h1>
+            <Banner />
+           <h1>Accueil</h1> 
         </div>
     );
 };
 
-export default About;
+export default Home;
