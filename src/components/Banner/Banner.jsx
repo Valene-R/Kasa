@@ -5,8 +5,11 @@ const Banner = () => {
   return (
     <div>
       <div className="image">
-        <img src={imageHome} alt="" />
-        <h1>Chez vous, partout et ailleurs</h1>
+        <img src={imageHome} alt="Falaise au bord de la mer" />
+        <h1>
+          <span>Chez vous,</span>
+          <span> partout et ailleurs</span>
+        </h1>
       </div>
     </div>
   );
