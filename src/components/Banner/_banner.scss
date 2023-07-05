@@ -10,8 +10,9 @@
 }
 
 h1 {
+    font-family: $font-montserrat;
     position: absolute;
-    color: #FFFFFF;
+    color: $color-secondary;
     font-size: 48px;
     font-weight: 500;
     top: 292px;

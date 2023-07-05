@@ -1,5 +1,5 @@
 .logoCopyright {
-    background-color: #000000;
+    background-color: $background-color;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -14,7 +14,9 @@
         height: 40px;
     } 
     .copyright {
-        color: #FFFFFF;
+        font-family: $font-montserrat;
+        color: $color-secondary;
+        font-size: 24px;
     }
 }
 
