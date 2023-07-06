@@ -1,16 +1,19 @@
-import React from 'react';
-// import Navigation from '../components/Navigation';
-// import Logo from '../components/Logo';
+import React, { Fragment } from 'react';
 import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
+import BannerAbout from '../../components/BannerAbout/BannerAbout';
+import CollapseSection from '../../components/CollapseSection/CollapseSection';
 
 const About = () => {
     return (
-        <div>
-            {/* <Logo />
-            <Navigation /> */}
+        <Fragment>
             <Header />
-            <h1>A Propos</h1>
-        </div>
+            <main>
+                <BannerAbout />
+                <CollapseSection />
+            </main>
+            <Footer />
+        </Fragment>
     );
 };
 

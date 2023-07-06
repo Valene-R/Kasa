@@ -8,8 +8,8 @@
     padding: 0;
 }
 
-body {
-    max-width: 1440px;
+html, body {
+    width: 1440px;
     margin: 0 auto;
     padding: 0;
     border: 0;
@@ -23,3 +23,17 @@ $color-primary: #FF6060;
 $color-secondary: #FFFFFF;
 $background-card: #F6F6F6;
 $background-color: #000000;
+
+
+////
+// MIXINS
+////
+@mixin imageHeaderPage {
+    width: 1240px;
+    height: 223px;
+    object-fit: cover;
+    border-radius: 25px;
+    position: relative;
+    margin: 17px 100px 0 100px;
+    filter: brightness(70%);
+}

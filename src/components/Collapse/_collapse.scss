@@ -1,0 +1,76 @@
+.collapse {
+    width: 1023px;
+    .toggle {
+        position: relative;
+        height: 52px;
+        position: relative;
+        background-color: $color-primary;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px 0 15px;
+        .collapseTitle {
+            color: $color-secondary;
+            font-family: $font-montserrat;
+            font-size: 24px;
+            align-self: center;
+        }
+    }
+}
+
+.chevron img {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+  
+.collapseContent {
+    width: 993px;
+    color: $color-primary;
+    background-color: $background-card;
+    font-size: 18px;
+    padding: 0 15px 0 15px;
+    text-align: left;
+    border-radius: 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+    &.open {
+        max-height: 70px;
+        padding: 15px;
+    }
+}
+
+.collapse.open .chevron img{
+    animation: rotateArrowOpen 0.3s forwards;
+}
+  
+@keyframes rotateArrowOpen {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-90deg);
+    }
+    100% {
+        transform: rotate(-180deg);
+    }
+}
+
+.collapse .chevron img{
+    animation: rotateArrowClose 0.3s forwards;
+}
+  
+@keyframes rotateArrowClose {
+    0% {
+        transform: rotate(-180deg);
+    }
+    50% {
+        transform: rotate(-90deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
