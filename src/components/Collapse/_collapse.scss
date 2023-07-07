@@ -27,19 +27,22 @@
 }
   
 .collapseContent {
-    width: 993px;
+    line-height: 1.4;
+    width: 983px;
+    font-family: $font-montserrat;
     color: $color-primary;
     background-color: $background-card;
     font-size: 18px;
-    padding: 0 15px 0 15px;
+    padding: 0 20px 0 20px;
     text-align: left;
     border-radius: 5px;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
     &.open {
-        max-height: 70px;
-        padding: 15px;
+        max-height: 100%;
+        padding-top: 19px;
+        padding-bottom: 19px;
     }
 }
 

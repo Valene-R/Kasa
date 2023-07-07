@@ -3,6 +3,7 @@
     src: url('../assets/fonts/Montserrat-Regular.ttf') format('truetype');
 }
 
+
 * {
     margin: 0;
     padding: 0;
@@ -14,6 +15,7 @@ html, body {
     padding: 0;
     border: 0;
 }
+
 
 ////
 // VARIABLES
@@ -34,6 +36,15 @@ $background-color: #000000;
     object-fit: cover;
     border-radius: 25px;
     position: relative;
-    margin: 17px 100px 0 100px;
+    margin: 0 100px 0 100px;
     filter: brightness(70%);
+}
+
+@mixin arrowAccommodationSheet {
+    width: 46px;
+    height: 80px;
+    cursor: pointer;
+    position: fixed;
+    top: 320px;
+    z-index: 1;
 }
