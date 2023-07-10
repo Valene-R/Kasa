@@ -5,7 +5,7 @@ const Banner = () => {
   return (
       <section className="image">
         <img src={imageHome} alt="Falaise au bord de la mer" />
-        <h1>
+        <h1 className="bannerHome">
           <span>Chez vous,</span>
           <span> partout et ailleurs</span>
         </h1>

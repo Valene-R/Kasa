@@ -1,15 +1,17 @@
-ul {
+.homeAboutLink {
     display: flex;
     gap: 56px;
     border: 1px;
+    height: 25px;
     a {
         text-decoration: none;
         li {
             color: $color-primary;
             list-style-type: none;
             font-size: 24px;
-            line-height: 34px;
+            height: 34px;
             font-family: $font-montserrat;
+            font-weight: 500;
         }
     }
 }
