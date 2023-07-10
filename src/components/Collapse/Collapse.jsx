@@ -11,7 +11,7 @@ const Collapse = ({title, content}) => {
     }
 
     return (
-        <div className= {`collapse ${isOpen ? 'open' : ''}`}>
+        <div className= {`collapse ${isOpen ? 'open' : ''}`} >
             <div className='toggle'>
                 <span className='collapseTitle'>{title}</span>
                 <span className='chevron'>

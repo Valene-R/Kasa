@@ -4,6 +4,8 @@ import Footer from '../../components/Footer/Footer';
 import { useNavigate, useParams } from 'react-router-dom';
 import data from '../../data/data.json';
 import Carousel from '../../components/Carousel/Carousel';
+import AccommodationDescription from '../../components/AccommodationDescription/AccommodationDescription';
+
 
 const AccommodationSheet = () => {
     // Extrait l'ID de l'URL à l'aide du hook usParams()
@@ -39,6 +41,16 @@ const AccommodationSheet = () => {
             <main>
                 {/* Composant Carousel avec les images du logement */}
                 <Carousel pictures={pictures} />
+                <AccommodationDescription
+                    key={accommodationId.id}
+                    title={accommodationId.title}
+                    location={accommodationId.location}
+                    tags={accommodationId.tags}
+                    host={accommodationId.host}
+                    rating={accommodationId.rating}
+                    description={accommodationId.description}
+                    equipments={accommodationId.equipments}
+                />
             </main>
             <Footer />
         </>

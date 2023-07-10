@@ -12,25 +12,32 @@
     border-radius: 25px;
 }
 
-.previousArrow {
-    border: none;
-    img {
-        @include arrowAccommodationSheet;
-        left: 123px;
+.button {
+    display: flex;
+    position: absolute;
+    padding: 50px;
+    width: 100%;
+    height: 40%;
+    align-items: flex-start;
+    .nextArrow {
+        border: none;
+        img {
+            @include arrowAccommodationSheet;
+            right: 180px;
+        }
     }
-}
-
-.nextArrow {
-    border: none;
-    img {
-        @include arrowAccommodationSheet;
-        right: 123px;
+    .previousArrow {
+        border: none;
+        img {
+            @include arrowAccommodationSheet;
+            left: 180px;
+        }
     }
 }
 
 .imageNumbering {
-    position: fixed;
-    top: 539px;
+    position: absolute;
+    top: 541px;
     z-index: 1;
     color: $color-secondary;
 }

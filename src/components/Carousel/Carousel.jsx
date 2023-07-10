@@ -24,14 +24,16 @@ const Carousel = ({pictures}) => {
             {/* Affiche les flèches et la numérotation uniquement s'il y a plus d'une image */}
             {showArrowsAndNumbering && (
                 <>
+                <div className='button'>
                 <button className='previousArrow' onClick={previewArrow}>
                     <img src={arrowLeft} alt='Flèche précédente' />   
                 </button>
-                {/* Numérotation de l'image en cours */}
-                <span className="imageNumbering">{`${currentImageIndex + 1}/${pictures.length}`}</span>
                 <button className='nextArrow' onClick={nextArrow}>
                     <img src={arrowRight} alt='Next' />
                 </button>
+                </div>
+                {/* Numérotation de l'image en cours */}
+                <span className="imageNumbering">{`${currentImageIndex + 1}/${pictures.length}`}</span>
                 </>
             )}
             {/* Affiche l'image en cours */}
