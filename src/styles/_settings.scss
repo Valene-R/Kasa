@@ -49,3 +49,10 @@ $color-star: #E3E3E3;
     top: 154px;
     z-index: 1;
 }
+
+@mixin errorDisplay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 139px;
+}

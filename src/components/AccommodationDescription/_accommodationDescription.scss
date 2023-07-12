@@ -54,11 +54,10 @@
     justify-content: flex-end;
     gap: 10px;
     .nameOwner {
-        color: #FF6060;
+        color: $color-primary;
         text-align: right;
         font-family: Montserrat;
         font-size: 18px;
-        font-style: normal;
         font-weight: 500;
         display: flex;
         flex-basis: min-content;

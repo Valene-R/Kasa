@@ -37,7 +37,9 @@
 
 .imageNumbering {
     position: absolute;
-    top: 541px;
+    top: 532px;
     z-index: 1;
     color: $color-secondary;
+    font-family: $font-montserrat;
+    font-size: 18px;
 }

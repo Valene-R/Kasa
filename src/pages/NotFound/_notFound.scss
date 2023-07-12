@@ -1,0 +1,21 @@
+.codeError {
+    color: $color-primary;
+    font-family: $font-montserrat;
+    font-size: 288px;
+    font-weight: 700;
+    width: 597px;
+    height: 263px;
+    margin: 189px auto 139px auto;
+    @include errorDisplay;
+
+}
+
+.messageError {
+    color: $color-primary;
+    font-family: $font-montserrat;
+    font-size: 36px;
+    font-weight: 500;
+    width: 872px;
+    margin: auto;
+    @include errorDisplay;
+}
