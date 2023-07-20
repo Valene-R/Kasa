@@ -1,0 +1,33 @@
+@mixin imageHeaderPage {
+    max-width: 1240px;
+    width: 90%;
+    height: 223px;
+    object-fit: cover;
+    border-radius: 25px;
+    position: relative;
+    filter: brightness(70%);
+    margin: 0 auto;
+    justify-content: center;
+    display: flex;
+}
+
+@mixin arrowAccommodationSheet {
+    width: 46px;
+    height: 80px;
+    cursor: pointer;
+    top: 154px;
+    z-index: 1;
+    border: none;
+    background-color: unset;
+}
+
+@mixin errorDisplay {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 139px;
+}
+
+@mixin buttonMobile {
+    width: 24px;
+    margin: 0;
+}

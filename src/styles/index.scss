@@ -1,3 +1,6 @@
+@import "./variables";
+@import "./mixins";
+@import "./fonts";
 @import "./settings";
 
 @import "../components/Navigation/navigation";
@@ -14,6 +17,7 @@
 
 @import "../components/Carousel/carousel";
 @import "../components/AccommodationDescription/accommodationDescription";
+@import "../components/Tags/tags";
 
-@import "../pages/NotFound/notFound";
+@import "../components/ErrorMessage/errorMessage";
 @import"../components/LinkReturnHome/linkReturnHome";

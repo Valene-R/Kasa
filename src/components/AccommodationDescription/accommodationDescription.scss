@@ -1,0 +1,142 @@
+.description {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 30px 104px 0 104px;
+    @media (max-width: 1324px) {
+        flex-direction: column;
+        margin: 30px 58px 0 58px;
+    }
+    @media (max-width: 400px) {
+        margin: 15px 20px 0 20px;
+    }
+    .accommodationTitle {
+        height: auto;
+        color: $color-primary;
+        font-family: $font-montserrat;
+        font-size: 36px;
+        font-weight: 500;
+        margin: 0;
+        @media (max-width: 1085px) {
+            font-size: 32px;
+        }
+        @media (max-width: 1009px) {
+            font-size: 26px;
+        }
+        @media (max-width: 800px) {
+            font-size: 26px;
+        }
+        @media (max-width: 700px) {
+            font-size: 18px;
+        }
+    }
+    .accommodationLocation {
+        height: 26px;
+        color: $color-primary;
+        font-family: $font-montserrat;
+        font-size: 18px;
+        font-weight: 500;
+        margin-top: 10px;
+        @media (max-width: 800px) {
+            font-size: 16px;
+        }
+        @media (max-width: 700px) {
+            font-size: 14px;
+        }
+    }
+}
+
+.owner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    @media (max-width: 800px) {
+        flex-direction: row-reverse;
+        align-items: start;
+        justify-content: space-between;
+    }
+    @media (max-width: 500px) {
+        height: 62px;
+        align-items: normal;
+        width: 332px;
+    }
+}
+
+.ownerNamePicture{
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    @media (max-width: 500px) {
+        align-items: center;
+        padding-bottom: 10px;
+    }
+    .nameOwner {
+        color: $color-primary;
+        text-align: right;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-weight: 500;
+        display: flex;
+        flex-basis: min-content;
+        align-self: center;
+        line-height: 26px;
+        @media (max-width: 500px) {
+            font-size: 12px;
+            line-height: normal;
+        }
+    }
+    .pictureOwner {
+        width: 64px;
+        height: 64px;
+        border-radius: 35px;
+        @media (max-width: 500px) {
+            width: 38px;
+            height: 38px;
+        }
+    }
+}
+
+.stars {
+    display: contents;
+    height: 36px;
+    margin: 21px 0 31px 0;
+    .star{
+        margin: 21px 0 31px 0;
+        @media (max-width: 500px) {
+            display: flex;
+            flex-direction: row;
+            width: 110px; 
+            margin-top: 16px;   
+        }
+        svg {
+            @media (max-width: 1024px) {
+                height: 30px;
+            }
+            @media (max-width: 500px) {
+                height: 22px;
+            }
+        }
+    }
+}
+
+.accommodationCollapses {
+    display: flex;
+    flex-direction: row;
+    gap: 76px;
+    margin: 0 104px;
+    @media (max-width: 700px) {
+        flex-direction: column;
+        gap: 20px;
+    }
+    @media (max-width: 543px) {
+        width: 335px;
+        margin: 0 auto;
+    }
+    .collapseTitle {
+        font-size: 18px !important;
+        @media (max-width: 800px) {
+            font-size: 13px !important;
+        }
+    }
+}
+

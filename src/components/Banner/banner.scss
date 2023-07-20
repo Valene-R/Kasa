@@ -1,0 +1,42 @@
+.image img{
+    @include imageHeaderPage;
+    margin-bottom: 43px;
+    @media (max-width: 768px) {
+        height: 111px;
+        margin-bottom: 22px;
+    }
+}
+
+.bannerHome {
+    font-family: $font-montserrat;
+    position: absolute;
+    color: $color-secondary;
+    font-size: 48px;
+    font-weight: 500;
+    top: 242px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @media (max-width: 1024px) {
+        display: flex;
+        flex-direction: column;
+    }
+    @media (max-width: 852px) {
+        top: 243px;
+        font-size: 35px;
+    }
+    @media (max-width: 840px) {
+        top: 236px;
+        left: 48%;
+        margin: 32px 0 32px 16px;
+    }
+    @media (max-width: 768px) {
+        font-size: 24px;
+        top: 186px;
+    }
+    @media (max-width: 500px) {
+        width: 217px; 
+        left: 123px;
+        top: 120px;
+    }
+}
+
