@@ -7,9 +7,9 @@ import arrowRightMobile from '../Carousel/arrowRightMobile.png';
 
 const Carousel = ({pictures}) => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
+    
         // Fonction pour passer à l'image précédente
-        const previewArrow = () => {
+        const previousArrow = () => {
             setCurrentImageIndex((index) => (index === 0 ? pictures.length - 1 : index - 1));   
         };
 
@@ -26,7 +26,7 @@ const Carousel = ({pictures}) => {
             {/* Affiche les flèches et la numérotation uniquement s'il y a plus d'une image */}
             {showArrowsAndNumbering && (
                 <div className='button'>
-                    <button className='previousArrow' onClick={previewArrow}>
+                    <button className='previousArrow' onClick={previousArrow}>
                         <img src={arrowLeft} alt='Flèche précédente' />  
                         <img src={arrowLeftMobile} alt='Flèche précédente' className='mobile-only'/> 
                     </button>

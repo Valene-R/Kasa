@@ -37,21 +37,15 @@ const AccommodationDescription = ({ title, location, tags, host, rating, descrip
                
                 <div className='accommodationCollapses'>
                     {/* Composant Collapse pour la description */}
-                    <Collapse className='collapseDescription' title="Description" content={<>{description}</>} />
+                    <Collapse className='collapseDescription' title="Description" content={<p>{description}</p>} />
                     {/* Composant Collapse pour les équipements */}
                     <Collapse className='collapseEquipment' title="Équipements" content={
-                        <>
+                        <ul>
                             {/* Utilisation de map pour itérer sur la liste d'équipements */}
-                            {equipments.map((item, index) => 
-                                // Utilisation de React.Fragment pour envelopper chaque élément et fournir une clé unique
-                                // permet de regrouper plusieurs éléments JSX sans créer d'élément parent supplémentaire
-                                <React.Fragment key={index}>
-                                    {item}
-                                    {/* Ajout d'un saut de ligne après chaque équipement */}
-                                    <br />
-                                </React.Fragment>
+                            {equipments.map((equipment, index) =>
+                                <li key={index}>{equipment}</li>
                             )}
-                        </> 
+                        </ul> 
                     } />
                 </div>
         </section>  

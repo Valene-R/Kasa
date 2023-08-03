@@ -20,9 +20,9 @@ const Collapse = ({title, content}) => {
                 </span>
             </div>
             {/* Affichage du contenu du Collapse en fonction de l'état isOpen */}
-            {/* Le contenu <p>{content}</p> est rendu uniquement lorsque isOpen est vrai. */}
+            {/* Le contenu <>{content}</> est rendu uniquement lorsque isOpen est vrai. */}
             <div className={`collapseContent ${isOpen ? 'open' : ''}`}>
-                {isOpen && <p>{content}</p>}
+                {isOpen && <>{content}</>}
             </div> 
         </div>
     );

@@ -1,19 +1,14 @@
 import React from 'react';
-import Header from '../../components/Header/Header';
-import Footer from '../../components/Footer/Footer';
+import Layout from '../../components/Layout/Layout';
 import BannerAbout from '../../components/BannerAbout/BannerAbout';
 import CollapseSection from '../../components/CollapseSection/CollapseSection';
 
 const About = () => {
     return (
-        <>
-            <Header />
-            <main>
-                <BannerAbout />
-                <CollapseSection />
-            </main>
-            <Footer />
-        </>
+        <Layout>
+            <BannerAbout />
+            <CollapseSection />
+        </Layout>
     );
 };
 
