@@ -1,18 +1,15 @@
 import React from 'react';
-import Header from '../../components/Header/Header';
-import Footer from '../../components/Footer/Footer';
+import Error404 from '../../components/Errors/Error404';
 import LinkReturnHome from '../../components/LinkReturnHome/LinkReturnHome';
+import Layout from '../../components/Layout/Layout';
 
 const NotFound = () => {
     return (
         <>
-            <Header /> 
-            <main>         
-                <h1 className='codeError'>404</h1>
-                <p className='messageError'>Oups! La page que vous demandez n'existe pas.</p>
+            <Layout>       
+                <Error404 />
                 <LinkReturnHome />
-            </main>
-            <Footer />       
+            </Layout>     
         </>
     );
 };

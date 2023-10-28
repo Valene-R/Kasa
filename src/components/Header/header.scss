@@ -1,0 +1,16 @@
+.logoNav {
+    max-width: 1240px;
+    width: 90%;
+    height: 68px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 45px;
+    margin-bottom: 50px;
+    @media (max-width: 500px) {
+        margin-bottom: 27px;
+        margin-top: 20px;
+        height: 48px;
+    }
+}

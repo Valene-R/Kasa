@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import svgArrow from '../../assets/svg/svgArrow.jpg';
+import arrowCollapse from '../Collapse/arrowCollapse.jpg';
 
 const Collapse = ({title, content}) => {
     // Utilisation du hook useState pour gérer l'état d'ouverture/fermeture du Collapse
@@ -16,13 +16,13 @@ const Collapse = ({title, content}) => {
                 <span className='collapseTitle'>{title}</span>
                 <span className='chevron'>
                     {/* Au clic la fonction chevronToggle est appelée ce qui entraîne l'inversion de l'état isOpen */}
-                    <img src={svgArrow} alt="Flèche ouverture et fermeture collapse" onClick={chevronToggle} />
+                    <img src={arrowCollapse} alt="Flèche ouverture et fermeture collapse" onClick={chevronToggle} />
                 </span>
             </div>
             {/* Affichage du contenu du Collapse en fonction de l'état isOpen */}
-            {/* Le contenu <p>{content}</p> est rendu uniquement lorsque isOpen est vrai. */}
+            {/* Le contenu <>{content}</> est rendu uniquement lorsque isOpen est vrai. */}
             <div className={`collapseContent ${isOpen ? 'open' : ''}`}>
-                {isOpen && <p>{content}</p>}
+                {isOpen && <>{content}</>}
             </div> 
         </div>
     );

@@ -4,9 +4,15 @@
     grid-row-gap: 50px;
     grid-column-gap: 60px;
     flex-wrap: wrap;
-    width: 1240px;
+    max-width: 1240px;
+    width: 100%;
     border-radius: 25px;
     background-color: $background-card;
     padding: 56px 0 43px 0;
-    margin: 0 100px;
+    margin: 0 auto;
+    @media (max-width: 500px) {
+        background-color: unset;
+        padding: 0;
+        grid-row-gap: 20px;
+    }
 }

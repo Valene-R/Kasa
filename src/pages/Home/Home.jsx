@@ -1,19 +1,21 @@
-import React, { Fragment} from 'react';
-import Header from '../../components/Header/Header';
+import React from 'react';
+import Layout from '../../components/Layout/Layout';
 import Banner from '../../components/Banner/Banner';
-import Footer from '../../components/Footer/Footer';
-import Cards from "../../components/Cards/Cards";
+import Cards from '../../components/Cards/Cards';
+import imageHome from '../../assets/img/imageHome1.png';
 
 const Home = () => {
     return (
-        <Fragment>
-            <Header />
-            <main>
-                <Banner />
-                <Cards />
-            </main>
-            <Footer />
-        </Fragment>
+        <Layout>
+            <Banner 
+                imageSrc={imageHome} 
+                altText="Falaise au bord de la mer" 
+                bannerTitle="Chez vous," 
+                bannerSubtitle=" partout et ailleurs" 
+                className="homeBanner"
+            />
+            <Cards />
+        </Layout>
     );
 };
 

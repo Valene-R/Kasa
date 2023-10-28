@@ -1,19 +1,19 @@
-import React, { Fragment } from 'react';
-import Header from '../../components/Header/Header';
-import Footer from '../../components/Footer/Footer';
-import BannerAbout from '../../components/BannerAbout/BannerAbout';
+import React from 'react';
+import Layout from '../../components/Layout/Layout';
+import Banner from '../../components/Banner/Banner';
 import CollapseSection from '../../components/CollapseSection/CollapseSection';
+import imageAbout from '../../assets/img/imageAbout1.png';
 
 const About = () => {
     return (
-        <Fragment>
-            <Header />
-            <main>
-                <BannerAbout />
-                <CollapseSection />
-            </main>
-            <Footer />
-        </Fragment>
+        <Layout>
+            <Banner 
+                imageSrc={imageAbout} 
+                altText="Paysage de montagne" 
+                className="aboutBanner"
+            />
+            <CollapseSection />
+        </Layout>
     );
 };
 

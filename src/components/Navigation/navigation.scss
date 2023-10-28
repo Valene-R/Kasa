@@ -3,6 +3,10 @@
     gap: 56px;
     border: 1px;
     height: 25px;
+    @media (max-width: 768px) {
+        height: 14px; 
+        gap: 26px;      
+    }
     a {
         text-decoration: none;
         li {
@@ -12,6 +16,11 @@
             height: 34px;
             font-family: $font-montserrat;
             font-weight: 500;
+            @media (max-width: 768px) {
+                text-transform: uppercase; // Transformer en lettres majuscules
+                font-size: 12px;
+                width: max-content;
+            }
         }
     }
 }

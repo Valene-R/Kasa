@@ -1,0 +1,8 @@
+.logo img{
+    width: 210px;
+    height: 68px;
+    @media (max-width: 500px) {
+        width: 145px;
+        height: 46px;
+    }
+}

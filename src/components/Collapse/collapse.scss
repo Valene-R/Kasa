@@ -1,5 +1,6 @@
 .collapse {
-    width: 1023px;
+    max-width: 1023px;
+    width: 100%;
     .toggle {
         position: relative;
         height: 52px;
@@ -8,11 +9,17 @@
         display: flex;
         justify-content: space-between;
         padding: 0 20px 0 15px;
+        @media (max-width: 768px) {
+            height: 32px;
+        }
         .collapseTitle {
             color: $color-secondary;
             font-family: $font-montserrat;
             font-size: 24px;
             align-self: center;
+            @media (max-width: 768px) {
+                font-size: 13px;
+            }
         }
     }
 }
@@ -23,6 +30,10 @@
     right: 10px;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
+    @media (max-width: 768px) {
+        top: 4px;
+        height: 24px;
+    }
 }
   
 .collapseContent {
@@ -37,6 +48,9 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+    @media (max-width: 768px) {
+        font-size: 12px;
+    }
     &.open {
         max-height: 100%;
         padding-top: 19px;

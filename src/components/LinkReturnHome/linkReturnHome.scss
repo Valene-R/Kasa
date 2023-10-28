@@ -8,4 +8,7 @@
     width: 284px;
     margin: auto;
     padding-bottom: 89px;
+    @media (max-width: 500px) {
+        font-size: 14px;
+    }
 }
