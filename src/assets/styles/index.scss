@@ -3,16 +3,16 @@
 @import "./fonts";
 @import "./settings";
 
+@import "../../components/Loader/loader";
+
 @import "../../components/Navigation/navigation";
 @import "../../components/Logo/logo";
 @import "../../components/Header/header";
-@import "../../components/Banner/banner";
 @import "../../components/Banner/banner";
 @import "../../components/Cards/cards";
 @import "../../components/Card/card";
 @import "../../components/Footer/footer";
 
-@import "../../components/BannerAbout/bannerAbout";
 @import "../../components/Collapse/collapse";
 @import "../../components/CollapseSection/collapseSection";
 

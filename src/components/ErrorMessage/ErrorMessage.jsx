@@ -1,10 +1,13 @@
 import React from 'react';
 
-const ErrorMessage = () => {
+const ErrorMessage = ({ errorCode = 'Erreur', messagePart1, messagePart2 }) => {
     return (
         <>
-            <h1 className='codeError'>404</h1>
-            <p className='messageError'><span>Oups! La page que </span><span className='space'>vous demandez n'existe pas.</span></p> 
+            <h1 className='errorLoading'>{errorCode}</h1>
+            <p className='messageError'>
+                <span>{messagePart1}</span>
+                <span className='space'>{messagePart2}</span>
+            </p> 
         </>
     );
 };

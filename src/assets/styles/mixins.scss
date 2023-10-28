@@ -31,3 +31,18 @@
     width: 24px;
     margin: 0;
 }
+
+@mixin error {
+    color: $color-primary;
+    font-family: $font-montserrat;
+    font-size: 288px;
+    font-weight: 700;
+    height: 263px;
+    margin: 189px auto 139px auto;
+    @include errorDisplay;
+}
+
+@mixin displayMessage {
+    height: 100px;
+    margin: 113px 0 113px 0;
+}

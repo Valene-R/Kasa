@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import {ROUTES} from '../../pages/Router/routes'
 
 const Card = ({accommodation}) => {
     /* Déstructure la prop "accommodation" pour extraire les valeurs nécessaires 
@@ -7,7 +8,7 @@ const Card = ({accommodation}) => {
     const { id, cover, title } = accommodation;
     return (
         <article>
-            <NavLink to={`/AccommodationSheet/${id}`} className='cardLink'>
+            <NavLink to={ROUTES.accommodationSheet(id)} className='cardLink'>
             <div className='accommodationCard'>
                 <img src={cover} alt={title} />
                 <h2 className='accommodationTitle'>{title}</h2>

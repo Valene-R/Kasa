@@ -1,7 +1,0 @@
-.imageAbout img {
-    @include imageHeaderPage;
-    margin-bottom: 38px;
-    @media (max-width: 768px) {
-        margin-bottom: 27px;
-    }
-}

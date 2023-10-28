@@ -1,18 +1,15 @@
 import React from 'react';
-import Header from '../../components/Header/Header';
-import Footer from '../../components/Footer/Footer';
+import Error404 from '../../components/Errors/Error404';
 import LinkReturnHome from '../../components/LinkReturnHome/LinkReturnHome';
-import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
+import Layout from '../../components/Layout/Layout';
 
 const NotFound = () => {
     return (
         <>
-            <Header /> 
-            <main>         
-                <ErrorMessage />
+            <Layout>       
+                <Error404 />
                 <LinkReturnHome />
-            </main>
-            <Footer />       
+            </Layout>     
         </>
     );
 };

@@ -1,4 +1,4 @@
-.image img{
+.homeBanner img {
     @include imageHeaderPage;
     margin-bottom: 43px;
     @media (max-width: 768px) {
@@ -7,7 +7,7 @@
     }
 }
 
-.bannerHome {
+.bannerTitle {
     font-family: $font-montserrat;
     position: absolute;
     color: $color-secondary;
@@ -35,8 +35,15 @@
     }
     @media (max-width: 500px) {
         width: 217px; 
-        left: 123px;
+        left: 128px;
         top: 120px;
     }
 }
 
+.aboutBanner img {
+    @include imageHeaderPage;
+    margin-bottom: 38px;
+    @media (max-width: 768px) {
+        margin-bottom: 27px;
+    }
+}

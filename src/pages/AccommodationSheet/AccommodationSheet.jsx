@@ -1,58 +1,82 @@
-import React, { useEffect } from 'react';
-import Header from '../../components/Header/Header';
-import Footer from '../../components/Footer/Footer';
-import { useNavigate, useParams } from 'react-router-dom';
-import data from '../../data/data.json';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+
 import Carousel from '../../components/Carousel/Carousel';
 import AccommodationDescription from '../../components/AccommodationDescription/AccommodationDescription';
-
+import Loader from '../../components/Loader/Loader';
+import ErrorLoading from '../ErrorLoading/ErrorLoading';
+import NotFound from '../NotFound/NotFound';
+import Layout from '../../components/Layout/Layout';
 
 const AccommodationSheet = () => {
-    // Extrait l'ID de l'URL à l'aide du hook usParams()
-    const {id} = useParams();
 
-    // Obtient la fonction de navigation du hook useNavigate()
-    // Cette fonction permet de rediriger l'utilisateur vers la page NotFound si besoin
-    const navigationNotFound = useNavigate();
+    // Extrait l'ID de l'URL à l'aide du hook useParams()
+    const {id} = useParams(); 
 
-    // Recherche le logement correspondant à l'ID
-    const accommodationId = data.find((item) => item.id === id);
+    // En attente du chargement des données 
+    const [isLoading, setIsLoading] = useState(true)
+
+    // L'erreur est vrai si pas de logement trouvé
+    const [isError, setIsError] = useState(false)
+    const [isError404, setIsError404] = useState(false)
+
+    // Différent de null si logement trouvé
+    const [logement, setLogement] = useState(null)
     
-    // Utilise le hook useEffect pour exécuter une action lorsque la valeur de accommodationId change
     useEffect (() => {
-        // Vérifie si le logement correspondant à l'ID existe
-        if (!accommodationId) {
-            // Si le logement n'existe pas, redirige vers la page NotFound
-            navigationNotFound('/notFound');
-        }
-    }, [accommodationId, navigationNotFound]);
 
-    // Récupère les images du logement si accommodationId existe, sinon utilise un tableau vide
-    const pictures = accommodationId ? accommodationId.pictures : [];
+        fetch('/logements.json')
+            .then(response => response.json())
+            .then(logements => {
+                const logementFound = logements.find((item) => item.id === id);
 
-    // Si le logement n'existe pas, retourne null pour ne pas afficher le reste du contenu de la page
-    if (!accommodationId) {
-        return null; 
+                setTimeout(() => {
+                    if(logementFound){
+                        setLogement(logementFound)
+                        setIsLoading(false)
+                    }else{
+                        setIsError404(true)
+                        setIsLoading(false)
+                    }
+                }, 1000)
+            })
+            .catch(err => {
+                setIsError(true)
+                setIsLoading(false)
+            })
+        }, [id]);
+
+    if (isLoading) {
+        return <Loader />;
     }
 
+    // Si erreur de chargement, redirige vers la page ErrorLoading
+    if(isError) {
+        return <ErrorLoading />;
+    }
+
+    // Si le logement n'existe pas, redirige vers la page NotFound
+    if(isError404) {
+        return <NotFound />;
+    }
+
+    // Logement trouvé
     return (
         <>
-            <Header />
-            <main>
+            <Layout>
                 {/* Composant Carousel avec les images du logement */}
-                <Carousel pictures={pictures} />
+                <Carousel pictures={logement.pictures} />
                 <AccommodationDescription
-                    key={accommodationId.id}
-                    title={accommodationId.title}
-                    location={accommodationId.location}
-                    tags={accommodationId.tags}
-                    host={accommodationId.host}
-                    rating={accommodationId.rating}
-                    description={accommodationId.description}
-                    equipments={accommodationId.equipments}
+                    key={logement.id}
+                    title={logement.title}
+                    location={logement.location}
+                    tags={logement.tags}
+                    host={logement.host}
+                    rating={logement.rating}
+                    description={logement.description}
+                    equipments={logement.equipments}
                 />
-            </main>
-            <Footer />
+            </Layout>
         </>
     );
 };
