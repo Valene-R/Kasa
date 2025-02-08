@@ -1,6 +1,3 @@
-import React from 'react';
-
-
 const StarSvg = ({
     width = 24,
     height = 24,

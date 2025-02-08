@@ -1,4 +1,3 @@
-import React from 'react';
 import Error404 from '../../components/Errors/Error404';
 import LinkReturnHome from '../../components/LinkReturnHome/LinkReturnHome';
 import Layout from '../../components/Layout/Layout';

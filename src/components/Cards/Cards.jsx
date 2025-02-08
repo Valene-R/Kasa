@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import {useEffect, useState} from 'react';
 import Card from '../Card/Card';
 import Loader from '../Loader/Loader';
 import ErrorLoadMessage from '../Errors/ErrorLoadMessage';

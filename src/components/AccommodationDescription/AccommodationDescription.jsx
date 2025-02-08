@@ -1,4 +1,3 @@
-import React from 'react';
 import Collapse from '../../components/Collapse/Collapse';
 import StarSvg from './StarSvg'
 import Tags from '../Tags/Tags';

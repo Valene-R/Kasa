@@ -1,5 +1,3 @@
-import React from 'react';
-
 const ErrorMessage = ({ errorCode = 'Erreur', messagePart1, messagePart2 }) => {
     return (
         <>

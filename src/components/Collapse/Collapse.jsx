@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import arrowCollapse from '../Collapse/arrowCollapse.jpg';
 
 const Collapse = ({title, content}) => {
