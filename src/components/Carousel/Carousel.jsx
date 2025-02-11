@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import arrowLeft from '../Carousel/arrowLeft.png';
 import arrowRight from '../Carousel/arrowRight.png';
 import arrowLeftMobile from '../Carousel/arrowLeftMobile.png';

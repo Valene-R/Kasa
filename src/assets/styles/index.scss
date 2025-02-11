@@ -1,24 +1,24 @@
-@import "./variables";
-@import "./mixins";
-@import "./fonts";
-@import "./settings";
+@forward "./variables";
+@forward "./mixins";
+@forward "./fonts";
+@forward "./settings";
 
-@import "../../components/Loader/loader";
+@use "../../components/Loader/loader";
 
-@import "../../components/Navigation/navigation";
-@import "../../components/Logo/logo";
-@import "../../components/Header/header";
-@import "../../components/Banner/banner";
-@import "../../components/Cards/cards";
-@import "../../components/Card/card";
-@import "../../components/Footer/footer";
+@use "../../components/Navigation/navigation";
+@use "../../components/Logo/logo";
+@use "../../components/Header/header";
+@use "../../components/Banner/banner";
+@use "../../components/Cards/cards";
+@use "../../components/Card/card";
+@use "../../components/Footer/footer";
 
-@import "../../components/Collapse/collapse";
-@import "../../components/CollapseSection/collapseSection";
+@use "../../components/Collapse/collapse";
+@use "../../components/CollapseSection/collapseSection";
 
-@import "../../components/Carousel/carousel";
-@import "../../components/AccommodationDescription/accommodationDescription";
-@import "../../components/Tags/tags";
+@use "../../components/Carousel/carousel";
+@use "../../components/AccommodationDescription/accommodationDescription";
+@use "../../components/Tags/tags";
 
-@import "../../components/ErrorMessage/errorMessage";
-@import"../../components/LinkReturnHome/linkReturnHome";
+@use "../../components/ErrorMessage/errorMessage";
+@use"../../components/LinkReturnHome/linkReturnHome";

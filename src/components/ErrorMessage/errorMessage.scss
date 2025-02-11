@@ -1,3 +1,6 @@
+@use "../../assets/styles/mixins" as *;
+@use "../../assets/styles/variables" as *;
+
 .codeError {
     @include error;
     @media (max-width: 700px) {

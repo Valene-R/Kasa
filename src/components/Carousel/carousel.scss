@@ -1,3 +1,6 @@
+@use "../../assets/styles/mixins" as *;
+@use "../../assets/styles/variables" as *;
+
 .bannerCarousel {
     display: flex;
     justify-content: center;

@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 @mixin imageHeaderPage {
     max-width: 1240px;
     width: 90%;
