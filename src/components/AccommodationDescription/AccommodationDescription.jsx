@@ -1,7 +1,7 @@
 import Collapse from '../../components/Collapse/Collapse';
-import StarSvg from './StarSvg'
+import StarSvg from './StarSvg';
 import Tags from '../Tags/Tags';
-
+import { formatLocation } from '../../utils/format';
 
 const AccommodationDescription = ({ title, location, tags, host, rating, description, equipments }) => {
 
@@ -18,7 +18,7 @@ const AccommodationDescription = ({ title, location, tags, host, rating, descrip
             <article className='description'>
             <div>
                 <h1 className='accommodationTitle'>{title}</h1>
-                <p className='accommodationLocation'>{location}</p>
+                <p className='accommodationLocation'>{formatLocation(location)}</p>
                 {/* Passe les tags en tant que propriété (props) au composant Tags */}
                 <Tags tags={tags} />
             </div>
