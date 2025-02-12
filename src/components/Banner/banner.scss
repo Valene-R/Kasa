@@ -5,9 +5,11 @@
 .homeBanner img {
     @include imageHeaderPage;
     margin-bottom: 43px;
+    filter: brightness(40%);
     @media (max-width: 768px) {
         height: 111px;
         margin-bottom: 22px;
+        border-radius: 10px;
     }
 }
 
@@ -20,6 +22,15 @@
     top: 242px;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    /* Simule un contour noir en ajoutant plusieurs ombres */
+    text-shadow: 
+        -1px -1px 0 $background-color,  // Ombre en haut à gauche 
+        1px -1px 0 $background-color,   // Ombre en haut à droite 
+        -1px 1px 0 $background-color,   // Ombre en bas à gauche 
+        1px 1px 0 $background-color,    // Ombre en bas à droite 
+        0px 4px 4px rgba(0, 0, 0, 0.25); // Ombre portée pour un effet de profondeur
+
     @media (max-width: 1024px) {
         display: flex;
         flex-direction: column;
@@ -36,6 +47,7 @@
     @media (max-width: 768px) {
         font-size: 24px;
         top: 186px;
+        text-shadow: none
     }
     @media (max-width: 500px) {
         width: 217px; 
@@ -47,7 +59,10 @@
 .aboutBanner img {
     @include imageHeaderPage;
     margin-bottom: 38px;
+    filter: brightness(70%);
     @media (max-width: 768px) {
         margin-bottom: 27px;
+        height: 111px;
+        border-radius: 10px;
     }
 }
