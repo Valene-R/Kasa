@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Navigate } from 'react-router-dom';
+import { ROUTES } from '../Router/routes';
 
 import Carousel from '../../components/Carousel/Carousel';
 import AccommodationDescription from '../../components/AccommodationDescription/AccommodationDescription';
 import Loader from '../../components/Loader/Loader';
 import ErrorLoading from '../ErrorLoading/ErrorLoading';
-import NotFound from '../NotFound/NotFound';
 import Layout from '../../components/Layout/Layout';
 
 const AccommodationSheet = () => {
@@ -26,7 +26,12 @@ const AccommodationSheet = () => {
     useEffect (() => {
 
         fetch('/logements.json')
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
             .then(logements => {
                 const logementFound = logements.find((item) => item.id === id);
 
@@ -41,6 +46,7 @@ const AccommodationSheet = () => {
                 }, 1000)
             })
             .catch(err => {
+                console.error("Error loading file:", err);
                 setIsError(true)
                 setIsLoading(false)
             })
@@ -55,29 +61,27 @@ const AccommodationSheet = () => {
         return <ErrorLoading />;
     }
 
-    // Si le logement n'existe pas, redirige vers la page NotFound
+    // Si aucun logement ne correspond à l’ID, redirige vers la route /not-found 
     if(isError404) {
-        return <NotFound />;
+        return <Navigate to={ROUTES.notFound} replace />;
     }
 
     // Logement trouvé
     return (
-        <>
-            <Layout>
-                {/* Composant Carousel avec les images du logement */}
-                <Carousel pictures={logement.pictures} />
-                <AccommodationDescription
-                    key={logement.id}
-                    title={logement.title}
-                    location={logement.location}
-                    tags={logement.tags}
-                    host={logement.host}
-                    rating={logement.rating}
-                    description={logement.description}
-                    equipments={logement.equipments}
-                />
-            </Layout>
-        </>
+        <Layout>
+            {/* Composant Carousel avec les images du logement */}
+            <Carousel pictures={logement.pictures} />
+            <AccommodationDescription
+                key={logement.id}
+                title={logement.title}
+                location={logement.location}
+                tags={logement.tags}
+                host={logement.host}
+                rating={logement.rating}
+                description={logement.description}
+                equipments={logement.equipments}
+            />
+        </Layout>
     );
 };
 

@@ -1,5 +1,6 @@
-export  const ROUTES = {
+export const ROUTES = {
     home : '/',
     about : '/about',
-    accommodationSheet : (id = ':id') => `/accommodation-sheet/${id}`
+    accommodationSheet : (id = ':id') => `/accommodation-sheet/${id}`,
+    notFound: '/not-found'
 }
